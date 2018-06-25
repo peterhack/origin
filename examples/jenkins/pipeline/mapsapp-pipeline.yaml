@@ -5,11 +5,16 @@ labels:
 metadata:
   name: mapsapp-pipeline
 parameters:
+- description: base repo
+  displayName: base repo
+  name: GIT_REPO
+  required: true
+  value: peterhack
 - description: NationalParks application source URI
   displayName: NationalParks Source URI
   name: NATIONALPARKS_GIT_URI
   required: true
-  value: https://github.com/openshift-roadshow/nationalparks.git
+  value: https://github.com/${GIT_REPO}/nationalparks.git
 - description: NationalParks application source reference
   displayName: NationalParks Source Ref
   name: NATIONALPARKS_GIT_REF
@@ -19,7 +24,7 @@ parameters:
   displayName: MLBParks Source URI
   name: MLBPARKS_GIT_URI
   required: true
-  value: https://github.com/openshift-roadshow/mlbparks.git
+  value: https://github.com/${GIT_REPO}/mlbparks.git
 - description: MLBParks application source reference
   displayName: MLBParks Source Ref
   name: MLBPARKS_GIT_REF
@@ -29,7 +34,7 @@ parameters:
   displayName: ParksMap Source URI
   name: PARKSMAP_GIT_URI
   required: true
-  value: https://github.com/openshift-roadshow/parksmap-web.git
+  value: https://github.com/${GIT_REPO}/parksmap-web.git
 - description: ParksMap application source reference
   displayName: ParksMap Source Ref
   name: PARKSMAP_GIT_REF
