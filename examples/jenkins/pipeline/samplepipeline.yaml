@@ -213,7 +213,6 @@ objects:
           name: ${NAME}
         name: ${NAME}
       spec:
-        serviceAccountName: dynatrace
         containers:
         - env:
           - name: DATABASE_SERVICE_NAME
